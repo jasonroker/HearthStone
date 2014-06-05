@@ -40,11 +40,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNickName = new System.Windows.Forms.TextBox();
             this.btnCreateCard = new System.Windows.Forms.Button();
+            this.btnCreateCardDeck = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbCardDeck = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnCreateGame
             // 
-            this.btnCreateGame.Location = new System.Drawing.Point(12, 158);
+            this.btnCreateGame.Location = new System.Drawing.Point(7, 162);
             this.btnCreateGame.Name = "btnCreateGame";
             this.btnCreateGame.Size = new System.Drawing.Size(119, 23);
             this.btnCreateGame.TabIndex = 0;
@@ -55,14 +58,14 @@
             // lstWaitGuest
             // 
             this.lstWaitGuest.FormattingEnabled = true;
-            this.lstWaitGuest.Location = new System.Drawing.Point(12, 187);
+            this.lstWaitGuest.Location = new System.Drawing.Point(7, 191);
             this.lstWaitGuest.Name = "lstWaitGuest";
-            this.lstWaitGuest.Size = new System.Drawing.Size(494, 95);
+            this.lstWaitGuest.Size = new System.Drawing.Size(499, 95);
             this.lstWaitGuest.TabIndex = 1;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(398, 158);
+            this.btnRefresh.Location = new System.Drawing.Point(398, 162);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(108, 23);
             this.btnRefresh.TabIndex = 2;
@@ -72,7 +75,7 @@
             // 
             // btnJoinGame
             // 
-            this.btnJoinGame.Location = new System.Drawing.Point(137, 158);
+            this.btnJoinGame.Location = new System.Drawing.Point(132, 162);
             this.btnJoinGame.Name = "btnJoinGame";
             this.btnJoinGame.Size = new System.Drawing.Size(119, 23);
             this.btnJoinGame.TabIndex = 3;
@@ -91,14 +94,14 @@
             // 
             // txtCardPath
             // 
-            this.txtCardPath.Location = new System.Drawing.Point(26, 41);
+            this.txtCardPath.Location = new System.Drawing.Point(102, 12);
             this.txtCardPath.Name = "txtCardPath";
-            this.txtCardPath.Size = new System.Drawing.Size(362, 20);
+            this.txtCardPath.Size = new System.Drawing.Size(286, 20);
             this.txtCardPath.TabIndex = 5;
             // 
             // btnPickCard
             // 
-            this.btnPickCard.Location = new System.Drawing.Point(398, 41);
+            this.btnPickCard.Location = new System.Drawing.Point(398, 10);
             this.btnPickCard.Name = "btnPickCard";
             this.btnPickCard.Size = new System.Drawing.Size(108, 23);
             this.btnPickCard.TabIndex = 6;
@@ -109,7 +112,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 70);
+            this.label2.Location = new System.Drawing.Point(18, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 7;
@@ -117,7 +120,7 @@
             // 
             // txtServerIP
             // 
-            this.txtServerIP.Location = new System.Drawing.Point(106, 67);
+            this.txtServerIP.Location = new System.Drawing.Point(101, 107);
             this.txtServerIP.Name = "txtServerIP";
             this.txtServerIP.Size = new System.Drawing.Size(282, 20);
             this.txtServerIP.TabIndex = 8;
@@ -125,7 +128,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 107);
+            this.label3.Location = new System.Drawing.Point(18, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 9;
@@ -133,27 +136,57 @@
             // 
             // txtNickName
             // 
-            this.txtNickName.Location = new System.Drawing.Point(106, 104);
+            this.txtNickName.Location = new System.Drawing.Point(101, 133);
             this.txtNickName.Name = "txtNickName";
             this.txtNickName.Size = new System.Drawing.Size(282, 20);
             this.txtNickName.TabIndex = 10;
             // 
             // btnCreateCard
             // 
-            this.btnCreateCard.Location = new System.Drawing.Point(398, 12);
+            this.btnCreateCard.Location = new System.Drawing.Point(398, 39);
             this.btnCreateCard.Name = "btnCreateCard";
-            this.btnCreateCard.Size = new System.Drawing.Size(105, 23);
+            this.btnCreateCard.Size = new System.Drawing.Size(108, 23);
             this.btnCreateCard.TabIndex = 11;
             this.btnCreateCard.Text = "卡牌资料生成";
             this.btnCreateCard.UseVisualStyleBackColor = true;
             this.btnCreateCard.Click += new System.EventHandler(this.btnCreateCard_Click);
+            // 
+            // btnCreateCardDeck
+            // 
+            this.btnCreateCardDeck.Location = new System.Drawing.Point(398, 68);
+            this.btnCreateCardDeck.Name = "btnCreateCardDeck";
+            this.btnCreateCardDeck.Size = new System.Drawing.Size(108, 23);
+            this.btnCreateCardDeck.TabIndex = 12;
+            this.btnCreateCardDeck.Text = "套牌构成";
+            this.btnCreateCardDeck.UseVisualStyleBackColor = true;
+            this.btnCreateCardDeck.Click += new System.EventHandler(this.btnCreateCardDeck_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 76);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "我的套牌";
+            // 
+            // cmbCardDeck
+            // 
+            this.cmbCardDeck.FormattingEnabled = true;
+            this.cmbCardDeck.Location = new System.Drawing.Point(101, 68);
+            this.cmbCardDeck.Name = "cmbCardDeck";
+            this.cmbCardDeck.Size = new System.Drawing.Size(282, 21);
+            this.cmbCardDeck.TabIndex = 14;
             // 
             // frmStartGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(518, 290);
+            this.ClientSize = new System.Drawing.Size(518, 301);
+            this.Controls.Add(this.cmbCardDeck);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnCreateCardDeck);
             this.Controls.Add(this.btnCreateCard);
             this.Controls.Add(this.txtNickName);
             this.Controls.Add(this.label3);
@@ -188,5 +221,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNickName;
         private System.Windows.Forms.Button btnCreateCard;
+        private System.Windows.Forms.Button btnCreateCardDeck;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbCardDeck;
     }
 }
